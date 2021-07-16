@@ -5,20 +5,19 @@
 
   ### Esta aplicación fue realizada con ReactJS, como evaluación del módulo 7 del curso de desarrollo FrontEnd en ADA ITW.
 
-  ### Si quieres crear tu lista de tareas puedes hacer click [aquí📋](https://edimar-m.github.io/Generador-de-memes/.).
+  ### Si quieres crear tu lista de tareas puedes hacer click [aquí📋](https://edimar-m.github.io/To-do-List/).
 
  
 ***
 ## Construido con las siguientes dependencias⌨
 
 - ReactJs
-- Material UI
 - Firebase
 
 ***
 ## Este es el resultado final del proyecto:
 
-![images](https://github.com/edimar-m/Generador-de-memes/blob/master/images/screencapture-proyecto-generador-de-memes-claro.png)
+![images](https://github.com/edimar-m/To-do-List/blob/master/images/screencapture-to-do-list.png)
 
 ***
 ## Agradecimientos🙌
