@@ -1,38 +1,226 @@
-.App {
-  text-align: center;
+/*general styles*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(https://images.unsplash.com/photo-1488998427799-e3362cec87c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80);
+  background-size: cover;
+  color: #f9b4ab;
+  font-family: 'Caveat', cursive;
+  min-height: 100vh;
+}
+header {
+  font-size: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
+header,
+form {
+  min-height: 16vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*form*/
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 1.8rem;
+  border: none;
+  background: white;
+  box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+  font-family: 'Acme', sans-serif;
+}
+form input {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  outline: none;
+}
+form input::placeholder {
+  color: #665248;
+  font-size: 1rem;
+}
+form button {
+  color: #264e70;
+  background: #f6fffe;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+form button:hover {
+  background: #264e70;
+  color: #f9b4ab;
+}
+
+/*task-list container*/
+.todo-container {
+  display: flex;
+  justify-content: center;
+  background-color: #edfffd;
+  background-size: cover;
+  opacity: 1.5;
+  background-position: top;
+  padding: 20px;
+  width: 60%;
+  min-height: 50vh;
+  margin: 0 auto 50px auto;
+  border-radius: 15px;
+}
+
+.todo-list {
+  width: 90%;
+  list-style: none;
+}
+
+/*task-list text*/
+.todo {
+  margin: 0.3rem;
+  font-size: 1.5rem;
+  color: #081f1c;
+  display: flex;
+  align-items: center;
+  transition: all 1s ease;
+  word-wrap: break-word;
+}
+.filter-todo {
+  padding: 1rem;
+  border-radius: 10px;
+}
+.todo li {
+  flex: 1;
+}
+
+/*Buttons*/
+
+.trash-btn,
+.complete-btn {
+  background: #679186;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.6rem;
+  margin: 1px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 50px;
+}
+.complete-btn {
+  background: #264e70;
+  margin-left: 15px;
+}
+.complete-btn:hover {
+  background-color: #b3b300;
+}
+
+.trash-btn:hover {
+  background-color: #b30000;
+}
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/*selector*/
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+
+/*select container*/
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+/*select text*/
+select {
+  font-family: 'Acme', sans-serif;
+  color: #665248;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 12rem;
+}
+/*select button*/
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background: #f6fffe;
+  color: #264e70;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.select:hover::after {
+  background: #264e70;
+  color: #f9b4ab;
+}
+
+/*media queries*/
+
+@media (max-width: 780px) {
+  header {
+    font-size: 1.5rem;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .todo-container {
+    width: 70%;
   }
-  to {
-    transform: rotate(360deg);
+  .todo {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  select {
+    width: 14.5rem;
+    font-size: 0.9rem;
+  }
+  .filter-todo {
+    padding: 13px;
+  }
+  .select::after {
+    padding: 13px;
+  }
+  form input {
+    width: 12.5rem;
+    font-size: 1.3rem;
+  }
+  form button {
+    font-size: 1.3rem;
+  }
+  .complete-btn,
+  .trash-btn {
+    padding: 0.3rem 0.4rem;
+    margin: 1px;
+    font-size: 0.7rem;
   }
 }
