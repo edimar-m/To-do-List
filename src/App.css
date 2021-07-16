@@ -38,6 +38,7 @@ form input {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   outline: none;
+  padding: 8px,
 }
 form input::placeholder {
   color: #665248;
@@ -69,6 +70,7 @@ form button:hover {
   min-height: 50vh;
   margin: 0 auto 50px auto;
   border-radius: 15px;
+  box-shadow: 3px 3px 3px 2px rgba(126, 126, 126, 0.2);
 }
 
 .todo-list {
